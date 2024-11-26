@@ -1,10 +1,94 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+body {
+  overflow-x: hidden;
+  position: relative;
 }
-nav{
-    height: 85px;
-    width: 100%;
-    background-color: #3b5d50 !important;
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  color: #6a6a6a;
+  font-size: 14px;
+  background-color: #eff2f1;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+nav {
+  height: 85px;
+  width: 100%;
+  background-color: #3b5d50 !important;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.nav_links {
+  display: flex;
+  list-style: none;
+  gap: 30px !important;
+}
+.nav_links a {
+  color: white;
+  text-decoration: none;
+}
+.hamburger{
+  display: none;
+  font-size: 30px;
+}
+/* hero */
+.hero {
+  background: #3b5d50;
+  color: white;
+}
+.hero h1 {
+  font-size: 60px;
+}
+
+.shop_now {
+  padding: 12px 30px;
+  margin-right: 8px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #2f2f2f;
+  background-color: #f9bf29;
+  border: 1px solid #f9bf29;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shop_now:hover {
+  background-color: #e6a723; /* Slightly darker shade on hover */
+  color: #1f1f1f;
+}
+
+.explore {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.explore:hover {
+  border-color: #ffffff; /* Solid white on hover */
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .nav_links li {
+    display: none;
+  }
+  .hamburger{
+    display: inline-block;
+  }
 }
