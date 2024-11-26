@@ -10,7 +10,7 @@ body {
   line-height: 28px;
   color: #6a6a6a;
   font-size: 14px;
-  background-color: #eff2f1;
+  background-color: #eff2f1 !important;
 }
 
 * {
@@ -87,7 +87,7 @@ nav {
 }
 /* Product Section */
 .product-section {
-  background: #e0e0e0;
+  background-color: #eff2f1;
   align-items: center;
   padding: 7rem 0;
 }
@@ -117,7 +117,7 @@ nav {
 
 /* Why Choose Us */
 .why-choose-us {
-  background: #e0e0e0;
+  background-color: #eff2f1;
   align-items: center;
   padding: 7rem 0;
   display: flex;
@@ -134,7 +134,7 @@ nav {
 /* new section */
 .we-help-section {
   padding: 7rem 0;
-  background-color: #e0e0e0;
+  background-color: #eff2f1;
 }
 .images img {
   border-radius: 20px;
@@ -143,25 +143,25 @@ nav {
 
 .images {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Create 6 equal columns */
-  gap: 10px; /* Add spacing between items */
+  grid-template-columns: repeat(6, 1fr); 
+  gap: 10px; 
   position: relative;
 }
 
 .grid-1 {
-  grid-column: 1 / span 4; /* Start at column 1 and span 4 columns */
-  grid-row: 1 / span 3; /* Start at row 1 and span 3 rows */
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 3;
 }
 
 .grid-2 {
-  grid-column: 5 / span 2; /* Start at column 5 and span 2 columns */
-  grid-row: 1 / span 1; /* Start at row 1 and span 1 row */
+  grid-column: 5 / span 2;
+  grid-row: 1 / span 1;
   padding-left: 20px;
 }
 
 .grid-3 {
-  grid-column: 3 / span 3; /* Start at column 3 and span 4 columns */
-  grid-row: 2 / span 2; /* Start at row 2 and span 2 rows */
+  grid-column: 3 / span 3;
+  grid-row: 2 / span 2; 
   padding-left: 20px;
 }
 .section-title {
@@ -192,6 +192,49 @@ nav {
   top: 8px;
 }
 
+/* Popular products */
+.popular-product {
+  padding: 0 0 7rem 0;
+  background-color: #eff2f1;
+}
+
+.popular-product {
+  padding: 0 0 7rem 0;
+}
+.popular-product .product-item-sm h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+.popular-product .item a {
+  text-decoration: none;
+  color: #2f2f2f;
+  transition: 0.3s all ease;
+}
+.popular-product .item a:hover {
+  color: rgba(47, 47, 47, 0.5);
+}
+.popular-product .item p {
+  line-height: 1.4;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.popular-product .item .thumbnail {
+  margin-right: 10px;
+
+  position: relative;
+}
+.popular-product .item .thumbnail:before {
+  content: "";
+  position: absolute;
+  border-radius: 20px;
+  background: #dce5e4;
+  width: 98px;
+  height: 98px;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
 /* Media Screen */
 @media (max-width: 768px) {
   .nav_links li {
