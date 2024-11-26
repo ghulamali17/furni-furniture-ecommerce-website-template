@@ -44,6 +44,7 @@ nav {
 .hero {
   background: #3b5d50;
   color: white;
+  padding-bottom: 20px;
 }
 .hero h1 {
   font-size: 60px;
@@ -64,7 +65,7 @@ nav {
 }
 
 .shop_now:hover {
-  background-color: #e6a723; /* Slightly darker shade on hover */
+  background-color: #e6a723;
   color: #1f1f1f;
 }
 
@@ -81,9 +82,37 @@ nav {
 }
 
 .explore:hover {
-  border-color: #ffffff; /* Solid white on hover */
+  border-color: #ffffff;
   color: #ffffff;
 }
+/* Product Section */
+.product-section {
+  background: #e0e0e0;
+  align-items: center;
+  padding: 7rem 0;
+}
+.product-thumbnail {
+  margin-bottom: 30px;
+}
+.product-section h3 {
+  font-weight: 600;
+  font-size: 16px; }
+  .btn-explore {
+    background-color: #2f2f2f;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+.btn-explore:hover {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
 
 /* Why Choose Us */
 .why-choose-us {
@@ -93,10 +122,12 @@ nav {
   display: flex;
   align-items: center !important;
 }
+
 .why-choose-us img {
   border-radius: 20px;
 }
-.why-choose-us p{
+
+.why-choose-us p {
   color: #6a6a6a;
 }
 /* Media Screen */
