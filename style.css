@@ -36,7 +36,7 @@ nav {
   color: white;
   text-decoration: none;
 }
-.hamburger{
+.hamburger {
   display: none;
   font-size: 30px;
 }
@@ -84,11 +84,27 @@ nav {
   border-color: #ffffff; /* Solid white on hover */
   color: #ffffff;
 }
+
+/* Why Choose Us */
+.why-choose-us {
+  background: #e0e0e0;
+  align-items: center;
+  padding: 7rem 0;
+  display: flex;
+  align-items: center !important;
+}
+.why-choose-us img {
+  border-radius: 20px;
+}
+.why-choose-us p{
+  color: #6a6a6a;
+}
+/* Media Screen */
 @media (max-width: 768px) {
   .nav_links li {
     display: none;
   }
-  .hamburger{
+  .hamburger {
     display: inline-block;
   }
 }
