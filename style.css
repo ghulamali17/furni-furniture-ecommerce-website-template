@@ -197,11 +197,7 @@ nav {
   padding: 0 0 7rem 0;
   background-color: #eff2f1;
 }
-
-.popular-product {
-  padding: 0 0 7rem 0;
-}
-.popular-product .product-item-sm h3 {
+.popular-product .item h3 {
   font-size: 14px;
   font-weight: 700;
   color: #2f2f2f;
@@ -235,6 +231,9 @@ nav {
   left: 50%;
   z-index: -1;
 }
+
+/* Testimonal */
+
 /* Media Screen */
 @media (max-width: 768px) {
   .nav_links li {
