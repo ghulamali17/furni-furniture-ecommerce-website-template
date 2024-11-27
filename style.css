@@ -45,11 +45,14 @@ nav {
 .hero {
   background: #3b5d50;
   color: white;
-  padding-bottom: 20px;
+  padding: calc(3rem - 30px) 0 0rem 0; 
 }
 .hero h1 {
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 30px;
   font-size: 60px;
-}
+  }
 
 .shop_now {
   padding: 12px 30px;
