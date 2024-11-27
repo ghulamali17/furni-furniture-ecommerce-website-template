@@ -108,7 +108,7 @@ nav {
 .product-price {
   text-decoration: none !important;
 }
-.btn-explore {
+.btn-style {
   background-color: #2f2f2f;
   color: #fff;
   padding: 12px 30px;
@@ -120,7 +120,7 @@ nav {
   transition: all 0.3s ease;
 }
 
-.btn-explore:hover {
+.btn-style:hover {
   background-color: #1f1f1f;
   color: #e0e0e0;
 }
@@ -477,14 +477,68 @@ nav {
 }
 
 /* Team Section */
-
-.team{
+.team {
   margin-bottom: 220px;
 }
-/* <!Services Section */
-.services{
-  padding: 7rem 0; 
+
+/* <Services Section */
+.services {
+  padding: 7rem 0;
 }
+
+/* Contact Section */
+.contact-info {
+  padding: 7rem 0;
+  line-height: 1.5;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+}
+
+.contact i {
+  background-color: #335d4a;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.contact p {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #495057;
+  line-height: 1.5;
+}
+.form-control {
+  height: 50px;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  resize: none;
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 50px;
+  max-height: 150px;
+}
+
+.form-control:active,
+form .form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #3b5d50;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
 /* Media Screen */
 @media (max-width: 768px) {
   .nav_links li {
