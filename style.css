@@ -41,7 +41,7 @@ nav {
   font-size: 30px;
 }
 nav .logo span {
-  color: #f9bf29; /* Highlighted dot */
+  color: #f9bf29; 
 }
 
 .nav_links li {
@@ -72,35 +72,21 @@ nav .logo span {
 }
 
 .nav_links li a.active {
-  color: #f9bf29; /* Highlight the active link */
+  color: #f9bf29;
 }
 
 .nav_links li a.active:before {
-  width: calc(100% - 16px); /* Apply the yellow underline for the active link */
+  width: calc(100% - 16px); 
 }
 
+.cart-icon {
+  cursor: pointer;
+}
 
-/* Responsive Design */
-/* @media (max-width: 768px) {
-  .nav_links {
-      display: none;
-      flex-direction: column;
-      background-color: #fff;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 100%;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+.cart-icon img {
+  pointer-events: none;
+}
 
-  .hamburger {
-      display: block;
-  }
-
-  .nav_links.active {
-      display: flex;
-  }
-} */
 
 /* Hero Section*/
 .hero {
