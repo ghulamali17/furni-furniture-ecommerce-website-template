@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-body {
+body,
+html {
   overflow-x: hidden;
   position: relative;
 }
-
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -13,11 +18,6 @@ body {
   background-color: #eff2f1 !important;
 }
 
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-}
 nav {
   height: 85px;
   width: 100%;
@@ -40,7 +40,8 @@ nav {
   display: none;
   font-size: 30px;
 }
-/* hero */
+
+/* Hero Section*/
 .hero {
   background: #3b5d50;
   color: white;
@@ -85,6 +86,7 @@ nav {
   border-color: #ffffff;
   color: #ffffff;
 }
+
 /* Product Section */
 .product-section {
   background-color: #eff2f1;
@@ -144,7 +146,7 @@ nav {
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
-  background-color: #222;
+  background: #2f2f2f;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -152,6 +154,7 @@ nav {
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 10;
+  color: white;
 }
 
 .product-container:hover .icon-cross {
@@ -178,7 +181,7 @@ nav {
   text-decoration: none !important;
 }
 
-/* Why Choose Us */
+/* Why Choose Us Section*/
 .why-choose-us {
   background-color: #eff2f1;
   align-items: center;
@@ -195,7 +198,7 @@ nav {
   color: #6a6a6a;
 }
 
-/* we-help-section */
+/* We Help Section */
 .we-help-section {
   padding: 7rem 0;
   background-color: #eff2f1;
@@ -256,7 +259,7 @@ nav {
   top: 8px;
 }
 
-/* Popular products */
+/* Popular Products Section */
 .popular-product {
   padding: 0 0 7rem 0;
   background-color: #eff2f1;
@@ -285,7 +288,7 @@ nav {
   position: relative;
 }
 
-/* Testimonal */
+/* Testimonal Section*/
 .testimonial-section {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -350,7 +353,6 @@ nav {
 }
 
 /* Blog Section */
-
 .blog-section {
   padding: 7rem 0 12rem 0;
 }
@@ -390,6 +392,7 @@ nav {
   opacity: 0.7;
   cursor: pointer;
 }
+
 /* Footer Section */
 .footer-section {
   padding: 80px 0;
@@ -505,5 +508,14 @@ nav {
   .prev,
   .next {
     display: none;
+  }
+  .footer-section .sofa-img img {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-section .sofa-img img {
+    max-width: 320px;
   }
 }
