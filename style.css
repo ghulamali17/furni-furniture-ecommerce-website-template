@@ -40,6 +40,67 @@ nav {
   display: none;
   font-size: 30px;
 }
+nav .logo span {
+  color: #f9bf29; /* Highlighted dot */
+}
+
+.nav_links li {
+  position: relative;
+  margin: 0 10px;
+}
+
+.nav_links li a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  background: #f9bf29;
+  height: 5px;
+  width: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: width 0.15s ease-out;
+}
+
+.nav_links li a:hover {
+  color: #f9bf29;
+}
+
+.nav_links li a:hover:before {
+  width: calc(100% - 16px);
+}
+
+.nav_links li a.active {
+  color: #f9bf29; /* Highlight the active link */
+}
+
+.nav_links li a.active:before {
+  width: calc(100% - 16px); /* Apply the yellow underline for the active link */
+}
+
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+  .nav_links {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .nav_links.active {
+      display: flex;
+  }
+} */
 
 /* Hero Section*/
 .hero {
