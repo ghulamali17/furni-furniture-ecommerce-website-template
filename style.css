@@ -46,7 +46,6 @@ nav {
   background: #3b5d50;
   color: white;
   padding-bottom: 20px;
-  /* height: 500px; */
 }
 .hero h1 {
   font-size: 60px;
@@ -477,6 +476,11 @@ nav {
   color: #ffffff;
 }
 
+/* Team Section */
+
+.team{
+  margin-bottom: 220px;
+}
 /* Media Screen */
 @media (max-width: 768px) {
   .nav_links li {
