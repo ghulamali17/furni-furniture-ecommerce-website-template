@@ -481,6 +481,10 @@ nav {
 .team{
   margin-bottom: 220px;
 }
+/* <!Services Section */
+.services{
+  padding: 7rem 0; 
+}
 /* Media Screen */
 @media (max-width: 768px) {
   .nav_links li {
@@ -506,6 +510,9 @@ nav {
 
   .next {
     right: -15px;
+  }
+  .footer-section .sofa-img img {
+    margin-top: 100px;
   }
 }
 
