@@ -91,14 +91,21 @@ nav {
   align-items: center;
   padding: 7rem 0;
 }
-.product-thumbnail {
-  margin-bottom: 30px;
-}
+
 .product-section h3 {
   font-weight: 600;
   font-size: 16px;
+  text-decoration: none !important;
 }
-
+.product-container {
+  text-decoration: none !important;
+  outline: none;
+  border: none;
+}
+.product-title,
+.product-price {
+  text-decoration: none !important;
+}
 .btn-explore {
   background-color: #2f2f2f;
   color: #fff;
@@ -110,9 +117,65 @@ nav {
   display: inline-block;
   transition: all 0.3s ease;
 }
+
 .btn-explore:hover {
   background-color: #1f1f1f;
   color: #e0e0e0;
+}
+
+.product-container {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: visible;
+  transition: background-color 0.3s ease;
+}
+
+.product-container:hover {
+  background: #dce5e4;
+}
+
+.icon-cross {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #222;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.product-container:hover .icon-cross {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.icon-cross img {
+  width: 16px;
+  height: 16px;
+  filter: invert(1);
+}
+
+.product-price {
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none !important;
+}
+
+.product-section strong {
+  font-weight: 800 !important;
+  font-size: 18px !important;
+  color: #2f2f2f;
+  text-decoration: none !important;
 }
 
 /* Why Choose Us */
@@ -131,7 +194,8 @@ nav {
 .why-choose-us p {
   color: #6a6a6a;
 }
-/* new section */
+
+/* we-help-section */
 .we-help-section {
   padding: 7rem 0;
   background-color: #eff2f1;
@@ -219,17 +283,6 @@ nav {
   margin-right: 10px;
 
   position: relative;
-}
-.popular-product .item .thumbnail:before {
-  content: "";
-  position: absolute;
-  border-radius: 20px;
-  background: #dce5e4;
-  width: 98px;
-  height: 98px;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
 }
 
 /* Testimonal */
@@ -352,7 +405,7 @@ nav {
 .footer-section .sofa-img img {
   max-width: 380px;
 }
-.footer-section .subscription-form {
+.footer-section .form {
   margin-bottom: 40px;
   position: relative;
   z-index: 2;
@@ -362,18 +415,18 @@ nav {
   text-decoration: none;
   color: #2f2f2f;
 }
-.footer-section .subscription-form h3 {
+.footer-section .form h3 {
   font-size: 18px;
   font-weight: 500;
   color: #3b5d50;
 }
-.footer-section .subscription-form .form-control {
+.footer-section .form .form-control {
   height: 50px;
   border-radius: 10px;
   font-family: "Inter", sans-serif;
 }
-.footer-section .subscription-form .form-control:active,
-.footer-section .subscription-form .form-control:focus {
+.footer-section .form .form-control:active,
+.footer-section .form .form-control:focus {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -419,6 +472,7 @@ nav {
   background: #3b5d50;
   color: #ffffff;
 }
+
 /* Media Screen */
 @media (max-width: 768px) {
   .nav_links li {
