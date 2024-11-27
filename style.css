@@ -542,6 +542,62 @@ form .form-control:focus {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* Cart section */
+.cart-table{
+  padding: 7rem 0;
+  overflow-x: scroll;
+  margin-bottom: 100px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+  border: 1px solid #ddd;
+  overflow-x: scroll;
+}
+
+/* Header styling */
+thead th {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* Body row styling */
+tbody td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Image styling */
+tbody img {
+  max-width: 80px;
+  height: auto;
+}
+
+/* Input field styling */
+input.quantity-amount {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+/* Hover effect for rows */
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+
+
+
+
 /* Media Screen */
 @media (max-width: 768px) {
   .nav_links li {
@@ -552,6 +608,12 @@ form .form-control:focus {
   }
   .blog-section-header {
     flex-direction: column;
+  }
+  table {
+    font-size: 14px;
+  }
+  tbody img {
+    max-width: 50px;
   }
 }
 
