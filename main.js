@@ -1,3 +1,4 @@
+// Responsive Navbar
 function toggleMenu() {
   const menuList = document.getElementById("nav_links");
   if (menuList.style.maxHeight === "0px" || menuList.style.maxHeight === "") {
@@ -7,15 +8,27 @@ function toggleMenu() {
   }
 }
 
+// Remove Navbar Active Class on smaller screens
 const removeActiveClassOnResize = () => {
   const navLinks = document.querySelectorAll(".nav_links a");
-  if (window.innerWidth < 768) {
-    navLinks.forEach((link) => link.classList.remove("active"));
-  }
+  const currentPath = window.location.pathname;
+
+  navLinks.forEach((link) => {
+    if (window.innerWidth < 768) {
+      link.classList.remove("active");
+    } else {
+      if (link.href.includes(currentPath)) {
+        link.classList.add("active");
+      }
+    }
+  });
 };
+
 window.addEventListener("resize", removeActiveClassOnResize);
 removeActiveClassOnResize();
 
+
+// Tiny Slider
 if (document.querySelector(".slider-wrapper")) {
   const tnsslider = tns({
     container: ".slider-wrapper",

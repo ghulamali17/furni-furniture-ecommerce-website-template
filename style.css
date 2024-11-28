@@ -104,6 +104,10 @@ nav li i {
   margin-bottom: 30px;
   font-size: 60px;
 }
+.hero p {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 30px;
+  }
 
 .shop_now {
   padding: 12px 30px;
@@ -638,6 +642,15 @@ input.quantity-amount {
 
 tbody tr:hover {
   background-color: #f9f9f9;
+}
+#coupon:active,
+#coupon:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #3b5d50;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Media Screen */
