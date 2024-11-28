@@ -18,6 +18,7 @@ body {
   background-color: #eff2f1 !important;
 }
 
+/* Navbar */
 nav {
   height: 85px;
   width: 100%;
@@ -31,6 +32,8 @@ nav {
   display: flex;
   list-style: none;
   gap: 30px !important;
+  transition: all 0.5s ease;
+  overflow: hidden;
 }
 .nav_links a {
   color: white;
@@ -41,7 +44,7 @@ nav {
   font-size: 30px;
 }
 nav .logo span {
-  color: #f9bf29; 
+  color: #f9bf29;
 }
 
 .nav_links li {
@@ -76,7 +79,7 @@ nav .logo span {
 }
 
 .nav_links li a.active:before {
-  width: calc(100% - 16px); 
+  width: calc(100% - 16px);
 }
 
 .cart-icon {
@@ -85,24 +88,22 @@ nav .logo span {
 nav li i {
   cursor: pointer;
 }
-
 .cart-icon img {
   pointer-events: none;
 }
-
 
 /* Hero Section*/
 .hero {
   background: #3b5d50;
   color: white;
-  padding: calc(3rem - 30px) 0 0rem 0; 
+  padding: calc(3rem - 30px) 0 0rem 0;
 }
 .hero h1 {
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
   font-size: 60px;
-  }
+}
 
 .shop_now {
   padding: 12px 30px;
@@ -593,7 +594,7 @@ form .form-control:focus {
 }
 
 /* Cart section */
-.cart-table{
+.cart-table {
   padding: 7rem 0;
   overflow-x: scroll;
   margin-bottom: 100px;
@@ -608,7 +609,6 @@ table {
   overflow-x: scroll;
 }
 
-/* Header styling */
 thead th {
   background-color: #f4f4f4;
   color: #333;
@@ -617,20 +617,17 @@ thead th {
   border: 1px solid #ddd;
 }
 
-/* Body row styling */
 tbody td {
   padding: 10px;
   border: 1px solid #ddd;
   text-align: center;
 }
 
-/* Image styling */
 tbody img {
   max-width: 80px;
   height: auto;
 }
 
-/* Input field styling */
 input.quantity-amount {
   width: 50px;
   text-align: center;
@@ -639,35 +636,53 @@ input.quantity-amount {
   padding: 5px;
 }
 
-/* Hover effect for rows */
 tbody tr:hover {
   background-color: #f9f9f9;
 }
 
-
-
-
-
 /* Media Screen */
 @media (max-width: 768px) {
-  .nav_links li {
-    display: none;
-  }
   .hamburger {
     display: inline-block;
+  }
+
+  .nav_links {
+    max-height: 0px;
+    transition: max-height 0.5s ease;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: start;
+    background-color: #335d4a;
+    gap: 0;
+    overflow: hidden;
+  }
+  .nav_links i,
+  .cart-icon {
+    display: none;
+  }
+
+  .nav_links a:hover {
+    color: #f9bf29;
+    background-color: transparent;
   }
   .blog-section-header {
     flex-direction: column;
   }
+
   table {
     font-size: 14px;
   }
+
   tbody img {
     max-width: 50px;
   }
-}
 
-@media (max-width: 768px) {
   .prev,
   .next {
     font-size: 1.5em;
@@ -680,8 +695,17 @@ tbody tr:hover {
   .next {
     right: -15px;
   }
+
   .footer-section .sofa-img img {
     margin-top: 100px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 16px;
   }
 }
 
@@ -690,6 +714,7 @@ tbody tr:hover {
   .next {
     display: none;
   }
+
   .footer-section .sofa-img img {
     max-width: 320px;
   }
@@ -698,5 +723,15 @@ tbody tr:hover {
 @media (max-width: 360px) {
   .footer-section .sofa-img img {
     max-width: 320px;
+  }
+}
+
+@media (hover: none), (max-width: 768px) {
+  .nav_links li a:hover {
+    color: inherit;
+  }
+
+  .nav_links li a:hover:before {
+    width: 0;
   }
 }
