@@ -96,7 +96,7 @@
           <div class="col-lg-8">
             <div class="row mt-md-5 text-center mt-3">
               <div class="col-12 col-md-4 col-lg-4 mb-4 mb-md-0">
-                <a href="./cart.html" class="product-container">
+                <div class="product-container">
                   <img
                     src="./images/product-1.png"
                     alt="Nordic Chair - Product 1"
@@ -106,14 +106,15 @@
                     Nordic Chair
                   </h3>
                   <strong class="product-price">$50.00</strong>
-                  <span class="icon-cross">
+                  <span class="icon-cross" onclick="cart(event)">
                     <i class="fa-solid fa-plus"></i>
                   </span>
-                </a>
+                </div>
               </div>
 
               <div class="col-12 col-md-4 col-lg-4 mb-4 mb-md-0">
-                <a href="./cart.html" class="product-container">
+                
+                  <div class="product-container">
                   <img
                     src="./images/product-2.png"
                     alt="Kruzo Aero Chair - Product 2"
@@ -123,13 +124,13 @@
                     Kruzo Aero Chair
                   </h3>
                   <strong class="product-price">$78.00</strong>
-                  <span class="icon-cross">
+                  <span class="icon-cross" onclick="cart(event)">
                     <i class="fa-solid fa-plus"></i>
                   </span>
-                </a>
+                </div>
               </div>
               <div class="col-12 col-md-4 col-lg-4 mb-4 mb-md-0">
-                <a href="./cart.html" class="product-container">
+                <div class="product-container">
                   <img
                     src="./images/product-3.png"
                     alt="Ergonomic Chair - Product 3"
@@ -139,10 +140,10 @@
                     Ergonomic Chair
                   </h3>
                   <strong class="product-price">$43.00</strong>
-                  <span class="icon-cross">
+                  <span class="icon-cross" onclick="cart(event)">
                     <i class="fa-solid fa-plus"></i>
                   </span>
-                </a>
+                </div>
               </div>
             </div>
           </div>
@@ -590,5 +591,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
     <!-- Script -->
     <script src="main.js"></script>
+    <script src="cart.js"></script>
   </body>
 </html>
