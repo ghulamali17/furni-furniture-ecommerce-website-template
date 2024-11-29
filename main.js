@@ -17,12 +17,15 @@ const removeActiveClassOnResize = () => {
     if (window.innerWidth < 768) {
       link.classList.remove("active");
     } else {
-      if (link.href.includes(currentPath)) {
+      if (link.pathname === currentPath) {
         link.classList.add("active");
+      } else {
+        link.classList.remove("active");
       }
     }
   });
 };
+
 
 window.addEventListener("resize", removeActiveClassOnResize);
 removeActiveClassOnResize();
