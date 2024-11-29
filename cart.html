@@ -67,6 +67,7 @@
 
     <section class="cart-table">
       <div class="container">
+        <h1 class="text-center producttrack"></h1>
         <table class="table">
           <thead>
             <tr>
@@ -78,7 +79,9 @@
               <th>Remove</th>
             </tr>
           </thead>
-          <tbody class="tbody"></tbody>
+          <tbody class="tbody">
+            <!-- <tr><td colspan="6">No products yet</td></tr> -->
+          </tbody>
         </table>
 
         <!-- Cart Actions -->
@@ -87,7 +90,7 @@
             <button class="btn-style btn-black btn-sm">Update Cart</button>
           </div>
           <div class="col-md-6">
-            <button class="btn-style btn-outline-black btn-sm">
+            <button class="btn-style btn-outline-black btn-sm" onclick="window.open('./shop.html')">
               Continue Shopping
             </button>
           </div>
@@ -289,7 +292,7 @@
     ></script>
     <!-- Tiny Slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <!-- Script -->
     <script src="main.js"></script>
   </body>
-  <!-- Script -->
 </html>

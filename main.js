@@ -27,7 +27,6 @@ const removeActiveClassOnResize = () => {
 window.addEventListener("resize", removeActiveClassOnResize);
 removeActiveClassOnResize();
 
-
 // Tiny Slider
 if (document.querySelector(".slider-wrapper")) {
   const tnsslider = tns({
@@ -46,6 +45,7 @@ if (document.querySelector(".slider-wrapper")) {
     nextButton: ".next",
   });
 }
+
 function cart(event) {
   const spanElement = event.target.closest(".icon-cross");
   const productContainer = spanElement.closest(".product-container");
@@ -73,39 +73,50 @@ function cart(event) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log(document.body); 
+  console.log("DOM fully loaded and parsed");
   const tbody = document.querySelector(".tbody");
-  console.log(tbody);  
-  if (tbody) {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  if (!tbody) {
+    console.error("tbody element not found!");
+    return;
+  }
+
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  console.log("Cart data:", cart);
+
+  let producttrack = document.querySelector(".producttrack");
+  if (producttrack) {
+    producttrack.innerText =
+      cart.length === 0 ? "Cart is empty" : `${cart.length} Items in cart`;
+  }
+
+  if (cart.length === 0) {
+    console.log("Cart is empty");
+  } else {
     cart.forEach((product, index) => {
       const row = document.createElement("tr");
-
       row.innerHTML = `
-        <td>
-          <img src="${product.image}" alt="${product.title}" style="width: 80px; height: auto;" />
-        </td>
-        <td>${product.title}</td>
-        <td>${product.price}</td>
-        <td>
-          <input
-            type="number"
-            class="form-control text-center quantity-amount"
-            value="1"
-            min="1"
-            aria-label="Quantity for ${product.title}"
-          />
-        </td>
-        <td>${product.price}</td>
-        <td><a href="#" class="btn btn-black btn-sm" onclick="removeFromCart(${index})">X</a></td>
-      `;
+            <td>
+              <img src="${product.image}" alt="${product.title}" style="width: 80px; height: auto;" />
+            </td>
+            <td>${product.title}</td>
+            <td>${product.price}</td>
+            <td>
+              <input
+                type="number"
+                class="form-control text-center quantity-amount"
+                value="1"
+                min="1"
+                aria-label="Quantity for ${product.title}"
+              />
+            </td>
+            <td>${product.price}</td>
+            <td><a href="#" class="btn btn-black btn-sm" onclick="removeFromCart(${index})">X</a></td>
+          `;
       tbody.appendChild(row);
     });
-  } else {
-    console.error('tbody element not found!');
   }
 });
-
 
 function removeFromCart(index) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
