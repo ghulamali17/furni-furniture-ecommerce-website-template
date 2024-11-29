@@ -47,9 +47,8 @@ if (document.querySelector(".slider-wrapper")) {
 }
 
 function cart(event) {
-  const spanElement = event.target.closest(".icon-cross");
-  const productContainer = spanElement.closest(".product-container");
-
+  const addToCartBtn = event.target.closest(".icon-cross");
+  const productContainer = addToCartBtn.closest(".product-container");
   const productImg = productContainer.querySelector(".product-img").src;
   const productTitle =
     productContainer.querySelector(".product-title").innerText;
@@ -73,46 +72,44 @@ function cart(event) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM fully loaded and parsed");
-  const tbody = document.querySelector(".tbody");
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  if (!tbody) {
-    console.error("tbody element not found!");
+  // Updating product track information
+  const producttrack = document.querySelector(".producttrack");
+  if (producttrack) {
+    producttrack.innerText =
+      cart.length === 0
+        ? "Cart is empty"
+        : `${cart.length} ${cart.length === 1 ? "Item" : "Items"} in cart`;
+  }
+
+  const table = document.querySelector("table");
+  if (!table) {
+    console.log("No table found on this page.");
     return;
   }
 
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  console.log("Cart data:", cart);
-
-  let producttrack = document.querySelector(".producttrack");
-  if (producttrack) {
-    producttrack.innerText =
-      cart.length === 0 ? "Cart is empty" : `${cart.length} Items in cart`;
+  const tbody = table.querySelector("tbody");
+  if (!tbody) {
+    console.error("Tbody not found!");
+    return;
   }
 
   if (cart.length === 0) {
-    console.log("Cart is empty");
+    console.log("Cart is empty.");
   } else {
     cart.forEach((product, index) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-            <td>
-              <img src="${product.image}" alt="${product.title}" style="width: 80px; height: auto;" />
-            </td>
-            <td>${product.title}</td>
-            <td>${product.price}</td>
-            <td>
-              <input
-                type="number"
-                class="form-control text-center quantity-amount"
-                value="1"
-                min="1"
-                aria-label="Quantity for ${product.title}"
-              />
-            </td>
-            <td>${product.price}</td>
-            <td><a href="#" class="btn btn-black btn-sm" onclick="removeFromCart(${index})">X</a></td>
-          `;
+        <td><img src="${product.image}" alt="${product.title}" style="width: 80px; height: auto;" /></td>
+        <td>${product.title}</td>
+        <td>${product.price}</td>
+        <td>
+          <input type="number" class="form-control text-center quantity-amount" value="1" min="1" aria-label="Quantity for ${product.title}" />
+        </td>
+        <td>${product.price}</td>
+        <td><a href="#" class="btn btn-black btn-sm" onclick="removeFromCart(${index})">X</a></td>
+      `;
       tbody.appendChild(row);
     });
   }
