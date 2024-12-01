@@ -36,7 +36,7 @@ nav {
   overflow: hidden;
 }
 .nav_links a {
- color: #2f2f2f;
+  color: white;
   text-decoration: none;
 }
 .hamburger {
@@ -66,16 +66,8 @@ nav .logo span {
   transition: width 0.15s ease-out;
 }
 
-.nav_links li a:hover {
-  color: #f9bf29;
-}
-
 .nav_links li a:hover:before {
   width: calc(100% - 16px);
-}
-
-.nav_links li a.active {
-  color: #f9bf29;
 }
 
 .nav_links li a.active:before {
