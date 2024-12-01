@@ -14,7 +14,7 @@ const removeActiveClassOnResize = () => {
   const currentPath = window.location.pathname;
 
   navLinks.forEach((link) => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 769) {
       link.classList.remove("active");
     } else {
       if (link.pathname === currentPath) {
