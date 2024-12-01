@@ -36,7 +36,7 @@ nav {
   overflow: hidden;
 }
 .nav_links a {
-  color: white;
+ color: #2f2f2f;
   text-decoration: none;
 }
 .hamburger {
@@ -82,7 +82,7 @@ nav .logo span {
   width: calc(100% - 16px);
 }
 
-.cart-icon {
+.icon-con li {
   cursor: pointer;
 }
 nav li i {
