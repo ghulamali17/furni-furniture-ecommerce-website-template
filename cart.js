@@ -1,3 +1,4 @@
+// Add to Cart
 function cart(event) {
   const addToCartBtn = event.target.closest(".icon-cross");
   const productContainer = addToCartBtn.closest(".product-container");
@@ -16,6 +17,7 @@ function cart(event) {
 
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+  // Duplicate Product
   const productExists = cart.some((item) => item.title === productTitle);
 
   if (productExists) {
