@@ -16,8 +16,13 @@ function cart(event) {
 
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  cart.push(product);
+  const productExists = cart.some((item) => item.title === productTitle);
 
+  if (productExists) {
+    alert(`${productTitle} is already in your cart.`);
+    return;
+  }
+  cart.push(product);
   localStorage.setItem("cart", JSON.stringify(cart));
 
   console.log("Product added to cart:", product);
